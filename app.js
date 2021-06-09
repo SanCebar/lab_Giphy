@@ -3,15 +3,17 @@ console.log("js linked!");
 /* Global Constants */
 const api_key = "JdUkv5EiIQE2pjXg2iTh0ytvRY4W0S5F";
 const limit = 9;
-const rating = 'g';
+const rating = "g";
 const lang = "en";
 
 const gif_form = document.querySelector("form");
 gif_form.addEventListener("submit", getResults);
 
-async function getResults (evt) {
+async function getResults(evt) {
+    console.log("form submitted!");
     evt.preventDefault();
-    const searchTerm = evt.target.gif.value;
+    
+    const searchTerm = evt.target.giffy.value;
     const apiUrl = `http://api.giphy.com/v1/gifs/search?q=${searchTerm}&limit=${limit}&rating=${rating}&lang=${lang}&api_key=${api_key}`;
 
     //go to giphy API
