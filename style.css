@@ -1,0 +1,17 @@
+* {
+    background-color: #000000;
+    color:bisque;
+    text-align: center;
+}
+
+.gif-results {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 5px;
+}
+
+.gif-results img {
+    height: 500px;
+    max-width: 100%;
+}
